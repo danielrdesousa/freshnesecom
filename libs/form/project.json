@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/form",
+  "sourceRoot": "libs/form/src",
+  "prefix": "freshnesecom",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/form"],
+      "options": {
+        "jestConfig": "libs/form/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/form/**/*.ts", "libs/form/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

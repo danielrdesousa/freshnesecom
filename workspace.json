@@ -1,4 +1,8 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "form": "libs/form",
+    "store": "apps/store",
+    "store-e2e": "apps/store-e2e"
+  }
 }
