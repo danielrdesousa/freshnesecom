@@ -4,16 +4,16 @@
   gap: 6px;
 
   color: #FFFFFF;
-  background-color: #6A983C;
+  background-color: var(--color-secondary-400);
 
-  border-radius: 12px;
-  border: 2px solid #46760A;
+  border-radius: toRem(12);
+  border: 2px solid var(--color-secondary-500);
 
   &--outline {
     color: #000000;
     background-color: #FFFFFF;
 
-    border: 2px solid #92C064;
+    border: 2px solid var(--color-secondary-300);
 
     path {
       stroke: #000000;
