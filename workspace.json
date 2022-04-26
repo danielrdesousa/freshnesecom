@@ -1,8 +1,8 @@
 {
   "version": 2,
   "projects": {
-    "form": "libs/form",
     "store": "apps/store",
-    "store-e2e": "apps/store-e2e"
+    "store-e2e": "apps/store-e2e",
+    "ui": "libs/ui"
   }
 }

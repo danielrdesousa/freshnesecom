@@ -1,0 +1,39 @@
+.ui-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #FFFFFF;
+  background-color: #6A983C;
+
+  border-radius: 12px;
+  border: 2px solid #46760A;
+
+  &--outline {
+    color: #000000;
+    background-color: #FFFFFF;
+
+    border: 2px solid #92C064;
+
+    path {
+      stroke: #000000;
+    }
+  }
+
+  cursor: pointer;
+
+  &--large {
+    height: 56px;
+    padding: 12px 48px 12px 48px;
+  }
+
+  &--medium {
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  &--small {
+    height: 36px;
+    padding: 12px;
+  }
+}
