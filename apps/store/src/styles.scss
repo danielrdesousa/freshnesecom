@@ -2,3 +2,26 @@
 
 @import url('./assets/_variables.scss');
 @import url('./assets/_reset.scss');
+@import url('./assets/_fonts.scss');
+
+$primary_font: 'Open Sans';
+$thin: 100;
+$light: 300;
+$regular: 400;
+$semiBold: 600;
+$bold: 700;
+$black: 900;
+
+// Font size
+$font-xs: 12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 18px;
+$font-lg: 20px;
+
+body {
+  font-family: $primary_font;
+  font-size: $font-sm;
+  font-weight: $thin;
+  line-height: 140%;
+}
