@@ -1,0 +1,46 @@
+@use 'libs/ui/src/lib/assets/mixins' as m;
+
+@import 'libs/ui/src/lib/assets/variables';
+@import 'libs/ui/src/lib/assets/fonts';
+
+.ui-button {
+  @include m.text-button;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #FFFFFF;
+  background-color: $color-secondary-400;
+
+  border-radius: 12px;
+  border: 2px solid $color-secondary-500;
+
+  &--outline {
+    color: $color-primary-500;
+    background-color: transparent;
+
+    border: 2px solid $color-secondary-500;
+
+    path {
+      stroke: $color-secondary-300;
+    }
+  }
+
+  cursor: pointer;
+
+  &--large {
+    height: 56px;
+    padding: 12px 48px 12px 48px;
+  }
+
+  &--medium {
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  &--small {
+    height: 36px;
+    padding: 12px;
+  }
+}
