@@ -1,19 +1,26 @@
+@use 'libs/ui/src/lib/assets/mixins' as m;
+
+@import 'libs/ui/src/lib/assets/variables';
+@import 'libs/ui/src/lib/assets/fonts';
+
 .ui-button {
+  @include m.text-button;
+
   display: flex;
   align-items: center;
   gap: 6px;
 
   color: #FFFFFF;
-  background-color: var(--color-secondary-400);
+  background-color: $color-secondary-400;
 
   border-radius: 12px;
-  border: 2px solid var(--color-secondary-500);
+  border: 2px solid $color-secondary-500;
 
   &--outline {
     color: #000000;
     background-color: #FFFFFF;
 
-    border: 2px solid var(--color-secondary-300);
+    border: 2px solid $color-secondary-300;
 
     path {
       stroke: #000000;

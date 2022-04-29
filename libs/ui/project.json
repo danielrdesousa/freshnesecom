@@ -12,6 +12,11 @@
         "passWithNoTests": true
       }
     },
+    "build": {
+      "inlineStyleLanguage": "scss",
+      "assets": ["libs/ui/assets"],
+      "styles": ["libs/ui/assets/styles.scss"]
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {

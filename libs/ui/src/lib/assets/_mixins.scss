@@ -1,0 +1,68 @@
+@mixin text-button {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 15px;
+}
+
+@mixin text-lead {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23.15px;
+}
+
+@mixin text-body {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.07px;
+}
+
+@mixin text-caption {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16.34px;
+}
+
+@mixin text-s1 {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44.8px;
+}
+
+@mixin text-s2 {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+@mixin text-s3 {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+@mixin text-s4 {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+@mixin text-s5 {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22.5px;
+}
+
+@mixin text-s6 {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+}
