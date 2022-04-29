@@ -9,9 +9,9 @@ import { UiModule } from '@freshnesecom/ui';
 
 @NgModule({
   imports: [
+    CommonModule,
     HomeRoutingModule,
     UiModule,
-    CommonModule
   ],
   declarations: [HomeComponent]
 })
