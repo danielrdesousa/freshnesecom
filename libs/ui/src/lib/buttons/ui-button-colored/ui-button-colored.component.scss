@@ -16,17 +16,6 @@
   border-radius: 12px;
   border: 2px solid $color-secondary-500;
 
-  &--outline {
-    color: $color-primary-500;
-    background-color: transparent;
-
-    border: 2px solid $color-secondary-500;
-
-    path {
-      stroke: $color-secondary-300;
-    }
-  }
-
   cursor: pointer;
 
   &--large {
