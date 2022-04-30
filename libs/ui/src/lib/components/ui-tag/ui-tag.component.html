@@ -1,1 +1,4 @@
-<p>ui-tag works!</p>
+<div class="ui-tag ui-tag--{{ type }} ui-tag--{{ size }}">
+  <ng-content></ng-content>
+  <i class="ui-icon actions-close-simple" *ngIf="canDelete" (click)="remove($event);"></i>
+</div>

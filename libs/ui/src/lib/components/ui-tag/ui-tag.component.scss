@@ -1,0 +1,43 @@
+@use 'libs/ui/src/lib/assets/mixins' as m;
+
+@import 'libs/ui/src/lib/assets/variables';
+@import 'libs/ui/src/lib/assets/fonts';
+@import 'libs/ui/src/lib/assets/icons';
+
+.ui-tag {
+  @include m.text-s6;
+
+  width: fit-content;
+
+  margin: 0;
+  padding: 0 8px;
+  border-radius: 12px;
+
+  display: inline-flex;
+  gap: 4px;
+
+  .ui-icon {
+    @include m.text-s6;
+    cursor: pointer;
+  }
+
+  &.ui-tag--large {
+    padding: 4px 10px;
+  }
+
+  &.ui-tag--default {
+    color: $color-primary-700;
+    background-color: $color-primary-200;
+  }
+
+  &.ui-tag--colored {
+    color: $color-secondary-400;
+    background-color: $color-secondary-100;
+  }
+
+  &.ui-tag--bordered {
+    border: 1px solid $color-primary-300;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+  }
+}

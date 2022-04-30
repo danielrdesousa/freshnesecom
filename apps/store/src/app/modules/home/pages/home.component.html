@@ -1,7 +1,14 @@
 <p>apps\store\src\app\modules\home\pages\home.component.html</p>
-<div style="display: flex; gap: 16px; margin-top: 16px;">
+<div style="display: flex; gap: 16px; margin: 16px 0;">
   <ui-button-stroke [size]="'small'">Buy now</ui-button-stroke>
   <ui-button-bright [size]="'small'">Buy now</ui-button-bright>
   <ui-button-colored [size]="'small'">Buy now</ui-button-colored>
   <ui-button-simple [size]="'small'">Buy now</ui-button-simple>
+</div>
+
+<div style="display: flex; gap: 16px;">
+  <ui-tag [size]="'large'" [canDelete]="true">Tag</ui-tag>
+  <ui-tag [type]="'default'" [size]="'large'">Tag</ui-tag>
+  <ui-tag [type]="'bordered'" [size]="'large'" [canDelete]="true">Tag</ui-tag>
+  <ui-tag [type]="'colored'" [size]="'large'">Tag</ui-tag>
 </div>
