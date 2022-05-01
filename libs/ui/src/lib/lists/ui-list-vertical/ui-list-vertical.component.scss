@@ -1,0 +1,20 @@
+@use 'libs/ui/src/lib/assets/mixins' as m;
+
+@import 'libs/ui/src/lib/assets/variables';
+@import 'libs/ui/src/lib/assets/fonts';
+
+
+.title {
+  @include m.text-s4;
+  margin-bottom: 16px;
+}
+
+.item {
+  @include m.text-body;
+  color: $color-secondary-400;
+  margin-bottom: 12px;
+
+  .underline {
+    text-decoration: underline;
+  }
+}
