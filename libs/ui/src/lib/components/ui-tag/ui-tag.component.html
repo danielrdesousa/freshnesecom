@@ -1,4 +1,4 @@
-<div class="ui-tag ui-tag--{{ type }} ui-tag--{{ size }}">
+<div class="ui-tag ui-tag--{{ type }} ui-tag--{{ size }}" #contentWrapper>
   <ng-content></ng-content>
-  <i class="ui-icon actions-close-simple" *ngIf="canDelete" (click)="remove($event);"></i>
+  <i class="ui-icon actions-close-simple" *ngIf="canDelete" (click)="removeDomElement();"></i>
 </div>
