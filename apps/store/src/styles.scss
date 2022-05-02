@@ -8,4 +8,5 @@
 
 body {
   @include m.text-body;
+  overflow: hidden;
 }

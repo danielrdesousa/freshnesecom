@@ -1,1 +1,47 @@
+@use './apps/store/src/assets/mixins' as m;
 
+@import './../../assets/_variables.scss';
+
+
+.top-toolbar {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(21, 21, 21, 0.05);
+
+  &__left, &__right {
+    display: flex;
+    gap: 33px;
+
+    p {
+      @include m.text-caption;
+    }
+
+    a {
+      @include m.text-caption;
+      text-decoration: none;
+      color: $color-secondary-400;
+    }
+  }
+}
+
+.store-header {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  & > div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 40px 0;
+  }
+}
+
+.store-main {
+  max-width: 1170px;
+  margin: 16px auto;
+}
