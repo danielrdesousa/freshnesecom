@@ -1,0 +1,79 @@
+@use 'libs/ui/src/lib/assets/mixins' as m;
+
+@import 'libs/ui/src/lib/assets/variables';
+@import 'libs/ui/src/lib/assets/fonts';
+@import 'libs/ui/src/lib/assets/icons';
+
+.ui-search {
+  min-width: 450px;
+
+  position: relative;
+  padding: 10px 16px;
+
+  display: flex;
+  gap: 24px;
+
+  background-color: $color-primary-100;
+
+  box-sizing: border-box;
+  border: 1px solid $color-primary-400;
+  border-radius: 12px;
+
+  input {
+    @include m.text-body;
+
+    width: 100%;
+    padding: 0 16px 0 0;
+    background: transparent;
+
+    position: relative;
+    border: none;
+    outline: none;
+  }
+
+  select {
+    @include m.text-button;
+
+    padding: 0 22px 0 0;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    /*Remove decorations to replace arrow with custom arrow */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &::-ms-expand { display: none };
+  }
+
+  .select-wrapper {
+    position: relative;
+
+    &::after {
+      content: "\e936";
+      font-size: 18px;
+      font-family: 'icomoon';
+      font-weight: 700;
+
+      position: absolute;
+      right: 0;
+
+      color: $color-secondary-400;
+    }
+  }
+
+  &::after {
+    content: "\e924";
+    font-family: 'icomoon';
+    font-weight: 700;
+
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    color: $color-primary-700;
+  }
+}
