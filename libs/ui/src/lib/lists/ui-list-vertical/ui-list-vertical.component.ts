@@ -1,3 +1,4 @@
+import { Listagem } from 'apps/store/src/app/shared/models/listagem.model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,9 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./ui-list-vertical.component.scss'],
 })
 export class UiListVerticalComponent implements OnInit {
-
-  @Input() title = 'Category Headline';
-  @Input() items!: [];
+  @Input() title!: string;
+  @Input() listagem!: Listagem;
 
   constructor() {}
 
