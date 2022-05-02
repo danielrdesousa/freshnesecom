@@ -5,3 +5,16 @@
   <ui-button-colored [size]="'small'">Buy now</ui-button-colored>
   <ui-button-simple [size]="'small'">Buy now</ui-button-simple>
 </div>
+
+<div style="display: flex; gap: 16px;">
+  <ui-tag>Tag</ui-tag>
+  <ui-tag [canDelete]="true">Tag</ui-tag>
+  <ui-tag [type]="'default'">Tag</ui-tag>
+  <ui-tag [type]="'default'" [canDelete]="true">Tag</ui-tag>
+  <ui-tag [type]="'bordered'">Tag</ui-tag>
+  <ui-tag [type]="'bordered'" [canDelete]="true">Tag</ui-tag>
+</div>
+
+<div style="margin: 16px 0;">
+  <ui-menu [menuList]="[{ title: 'a', router: '/#/' }, { title: 'b', subItem: [{ title: 'c', router: '/#/' }]}]"></ui-menu>
+</div>
