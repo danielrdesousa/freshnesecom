@@ -1,0 +1,17 @@
+<div class="ui-menu-wrapper">
+  <nav class="ui-menu">
+    <li *ngFor="let menuItem of menuList" [ngClass]="{'ui-menu-item parent' : menuItem?.subItem}">
+      <ng-container *ngIf="!menuItem?.subItem; else HasChildren">
+        <a class="ui-menu-item" [href]="menuItem?.router">{{ menuItem?.title }}</a>
+      </ng-container>
+      <ng-template #HasChildren>
+          {{ menuItem.title }}
+          <nav class="ui-menu-children">
+            <li *ngFor="let subItem of menuItem?.subItem">
+              <a class="ui-menu-item" [href]="subItem.router">{{ subItem.title }}</a>
+            </li>
+          </nav>
+      </ng-template>
+    </li>
+  </nav>
+</div>

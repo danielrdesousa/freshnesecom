@@ -1,5 +1,23 @@
-import { Listagem } from 'apps/store/src/app/shared/models/listagem.model';
 import { Component, Input, OnInit } from '@angular/core';
+
+interface Item {
+  title: string
+  slug: string
+  router: string | null
+  underline: boolean
+  tag: string | null
+}
+
+interface Action {
+  title: string | null
+  router: string | null
+}
+
+interface Listagem {
+  title: string | null
+  items: Item[]
+  action: Action
+}
 
 @Component({
   selector: 'ui-list-vertical',
@@ -7,8 +25,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./ui-list-vertical.component.scss'],
 })
 export class UiListVerticalComponent implements OnInit {
-  @Input() title!: string;
   @Input() listagem!: Listagem;
+  @Input() color = 'default'
 
   constructor() {}
 
