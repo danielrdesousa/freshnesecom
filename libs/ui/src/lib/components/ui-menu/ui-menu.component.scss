@@ -1,0 +1,85 @@
+@use 'libs/ui/src/lib/assets/mixins' as m;
+
+@import 'libs/ui/src/lib/assets/variables';
+@import 'libs/ui/src/lib/assets/fonts';
+@import 'libs/ui/src/lib/assets/icons';
+
+.ui-menu-wrapper {
+  width: 100%;
+  background-color: $color-primary-100;
+}
+
+.ui-menu {
+  height: 55px;
+  background-color: $color-primary-100;
+
+  list-style: none;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+
+  .ui-menu-item {
+    @include m.text-s5;
+    color: $color-primary-700;
+
+    display: block;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    &:hover {
+      color: $color-secondary-400;
+    }
+
+    &.parent {
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+
+      &::after {
+        content: "\e936";
+        font-family: 'icomoon';
+        font-weight: 700;
+
+        color: $color-secondary-400;
+      }
+    }
+
+    &.parent:hover {
+      & > .ui-menu-children {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        & > .ui-menu-item {
+          color: $color-primary-700;
+          &:hover {
+            color: $color-secondary-400;
+          }
+        }
+      }
+    }
+
+    &.parent {
+      .ui-menu-children {
+      opacity: 0;
+      display: none;
+      visibility: hidden;
+      position: absolute;
+      left: 0;
+      top: 55px;
+
+      padding: 8px 8px 8px 16px;
+      min-width: 120px;
+
+      background-color: $color-primary-100;
+      box-shadow: 2px 3px 3px rgb(0 0 0 / 10%);
+    }
+    }
+  }
+}
