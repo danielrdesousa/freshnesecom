@@ -1,0 +1,50 @@
+@use 'libs/ui/src/lib/assets/mixins' as m;
+
+@import 'libs/ui/src/lib/assets/variables';
+@import 'libs/ui/src/lib/assets/fonts';
+
+.ui-list {
+  width: 100%;
+
+  .ui-list-title {
+    @include m.text-s4;
+    margin-bottom: 16px;
+  }
+}
+
+.ui-list-group {
+  margin-bottom: 48px;
+
+  .ui-list-item {
+    @include m.text-body;
+    margin-bottom: 12px;
+  }
+
+  .--underline {
+    text-decoration: underline;
+  }
+}
+
+.ui-list-text-button{
+  color: $color-primary-700;
+  text-decoration: none;
+}
+
+.ui-list-link {
+  &--default{
+    color: $color-secondary-400;
+  }
+
+  &--grey{
+    color: $color-primary-500;
+  }
+}
+
+.ui-list-tag {
+  @include m.text-s6;
+  color: $color-secondary-400;
+  background: $color-secondary-100;
+  border-radius: 12px;
+  padding: 0px 8px;
+  margin-left: 130px;
+}
