@@ -18,32 +18,33 @@
   .ui-list-item {
     @include m.text-body;
     margin-bottom: 12px;
-  }
 
-  .--underline {
-    text-decoration: underline;
+    &--no-underline a {
+      text-decoration: none;
+    }
   }
 }
 
-.ui-list-text-button{
+.ui-list-text-button {
   color: $color-primary-700;
   text-decoration: none;
 }
 
 .ui-list-link {
-  &--default{
-    color: $color-secondary-400;
-  }
+  color: $color-primary-700;
 
-  &--grey{
-    color: $color-primary-500;
+  &--has-router {
+    color: $color-secondary-400;
   }
 }
 
 .ui-list-tag {
   @include m.text-s6;
+  cursor: default;
+
   color: $color-secondary-400;
   background: $color-secondary-100;
+
   border-radius: 12px;
   padding: 0px 8px;
   margin-left: 130px;

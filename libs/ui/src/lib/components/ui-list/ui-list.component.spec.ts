@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UiListVerticalComponent } from './ui-list-vertical.component';
+import { UiListComponent } from './ui-list.component';
 
-describe('UiListVerticalComponent', () => {
-  let component: UiListVerticalComponent;
-  let fixture: ComponentFixture<UiListVerticalComponent>;
+describe('UiListComponent', () => {
+  let component: UiListComponent;
+  let fixture: ComponentFixture<UiListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UiListVerticalComponent],
+      declarations: [UiListComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UiListVerticalComponent);
+    fixture = TestBed.createComponent(UiListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

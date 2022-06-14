@@ -1,0 +1,23 @@
+<div class="ui-list">
+  <h3 class="ui-list-title">{{ list?.title }}</h3>
+  <ul class="ui-list-group">
+    <li class="ui-list-item" *ngFor="let item of list?.items" [ngClass]="{'ui-list-item--no-underline': item?.hideUnderline}">
+      <a *ngIf="item?.router; else NoRouter" class="ui-list-link" [ngClass]="{'ui-list-link--has-router': item?.router}" [href]="item?.router">
+        {{ item.title }}
+      </a>
+      <ng-template #NoRouter>
+        <span class="ui-list-link">
+          {{ item?.title }}
+        </span>
+      </ng-template>
+      <span class="ui-list-tag" *ngIf="item?.tag">
+        {{ item.tag }}
+      </span>
+    </li>
+  </ul>
+  <div *ngIf="list?.action?.title && list?.action?.router">
+    <ui-button-bright [size]="'small'" [arrowRight]="true">
+      <a class="ui-list-text-button" [href]="list?.action?.router">{{ list?.action?.title }}</a>
+    </ui-button-bright>
+  </div>
+</div>
