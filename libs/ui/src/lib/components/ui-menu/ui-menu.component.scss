@@ -1,4 +1,5 @@
 @use 'libs/ui/src/lib/assets/mixins' as m;
+@use 'libs/ui/src/lib/assets/breakpoints' as view;
 
 @import 'libs/ui/src/lib/assets/variables';
 @import 'libs/ui/src/lib/assets/fonts';
@@ -9,31 +10,41 @@
   background-color: $color-primary-100;
   position: relative;
 
-  &::after {
-    content: '';
+  @include view.desktop {
+    &::after {
+      content: '';
 
-    width: calc(100vw - 18px);
-    height: 100%;
-    z-index: -1;
+      width: calc(100vw - 18px);
+      height: 100%;
+      z-index: -1;
 
-    background-color: $color-primary-100;
+      background-color: $color-primary-100;
 
-    left: 50%;
-    position: absolute;
+      left: 50%;
+      position: absolute;
 
-    transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
   }
 }
 
 .ui-menu {
-  height: 55px;
-  background-color: $color-primary-100;
-
   list-style: none;
 
-  display: inline-flex;
-  align-items: center;
-  gap: 40px;
+  background-color: $color-primary-100;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include view.desktop {
+    height: 55px;
+
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
 
   .ui-menu-item {
     @include m.text-s5;

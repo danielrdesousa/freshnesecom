@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @use './assets/mixins' as m;
+@use './assets/breakpoints' as view;
 
 @import url('./assets/_reset.scss');
 @import url('./assets/_variables.scss');
@@ -8,5 +9,13 @@
 @import url('./assets/_icons.scss');
 
 body {
+  min-width: 393px;
+  padding: 0 8px;
+  box-sizing: border-box;
+
+  @include view.desktop {
+    padding: 0;
+  }
+
   @include m.text-body;
 }

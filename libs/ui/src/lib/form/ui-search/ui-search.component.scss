@@ -1,23 +1,25 @@
 @use 'libs/ui/src/lib/assets/mixins' as m;
+@use 'libs/ui/src/lib/assets/breakpoints' as view;
 
 @import 'libs/ui/src/lib/assets/variables';
 @import 'libs/ui/src/lib/assets/fonts';
 @import 'libs/ui/src/lib/assets/icons';
 
 .ui-search {
-  min-width: 450px;
+  width: calc(100vw - 16px);
+  max-width: 500px;
+  min-width: 370px;
 
   position: relative;
   padding: 10px 16px;
-
-  display: flex;
-  gap: 24px;
 
   background-color: $color-primary-100;
 
   box-sizing: border-box;
   border: 1px solid $color-primary-400;
   border-radius: 12px;
+  display: flex;
+  gap: 24px;
 
   input {
     @include m.text-body;
@@ -31,39 +33,40 @@
     outline: none;
   }
 
-  select {
-    @include m.text-button;
+    select {
+      @include m.text-button;
 
-    padding: 0 22px 0 0;
+      padding: 0 22px 0 0;
 
-    background: transparent;
-    border: none;
-    outline: none;
+      background: transparent;
+      border: none;
+      outline: none;
 
-    cursor: pointer;
+      cursor: pointer;
 
-    /*Remove decorations to replace arrow with custom arrow */
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    &::-ms-expand { display: none };
-  }
-
-  .select-wrapper {
-    position: relative;
-
-    &::after {
-      content: "\e936";
-      font-size: 18px;
-      font-family: 'icomoon';
-      font-weight: 700;
-
-      position: absolute;
-      right: 0;
-
-      color: $color-secondary-400;
+      /*Remove decorations to replace arrow with custom arrow */
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      &::-ms-expand { display: none };
     }
-  }
+
+    .select-wrapper {
+      position: relative;
+
+      &::after {
+        content: "\e936";
+        font-size: 18px;
+        font-family: 'icomoon';
+        font-weight: 700;
+
+        position: absolute;
+        right: 0;
+
+        color: $color-secondary-400;
+      }
+    }
+
 
   &::after {
     content: "\e924";
