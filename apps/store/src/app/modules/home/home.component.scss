@@ -1,0 +1,73 @@
+@use './apps/store/src/assets/mixins' as m;
+@use './apps/store/src/assets/breakpoints' as view;
+
+.wrapper-content {
+  gap: 64px;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 64px;
+}
+
+.category-menu {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @include view.desktop {
+    flex-direction: row;
+    gap: inherit;
+  }
+
+  &__banners {
+    gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      width: 419px;
+      height: 280px;
+    }
+  }
+}
+
+.best-selling {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @include view.desktop {
+    flex-direction: row;
+    gap: inherit;
+  }
+
+  &__items {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+}
+
+.headline {
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+
+  .headline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+      @include m.text-s4;
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: 31px;
+    flex-wrap: wrap;
+  }
+}

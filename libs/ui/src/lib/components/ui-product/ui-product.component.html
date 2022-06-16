@@ -1,0 +1,19 @@
+<div class="ui-product" *ngIf="product">
+  <div class="featured-image">
+    <ui-tag *ngIf="product?.off">-{{ product?.off?.percent }}%</ui-tag>
+    <img [src]="product?.image" [alt]="product?.title" *ngIf="product?.image">
+  </div>
+  <div class="details">
+    <h2 class="details__title">{{ product?.title }}</h2>
+    <p class="details__description">{{ product?.description }}</p>
+    <div class="price">
+      <h3 class="price__value">
+        {{ product?.value }} USD
+        <ng-container *ngIf="product?.off">
+          <span class="price__off">{{ product?.off?.oldValue}}</span>
+        </ng-container>
+      </h3>
+      <ui-button-colored [size]="'small'">Buy now</ui-button-colored>
+    </div>
+  </div>
+</div>

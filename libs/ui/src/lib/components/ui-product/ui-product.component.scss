@@ -1,0 +1,82 @@
+@use 'libs/ui/src/lib/assets/mixins' as m;
+@use 'libs/ui/src/lib/assets/breakpoints' as view;
+
+@import 'libs/ui/src/lib/assets/variables';
+@import 'libs/ui/src/lib/assets/fonts';
+@import 'libs/ui/src/lib/assets/icons';
+
+.ui-product {
+  width: 269px;
+  height: 323px;
+
+  padding: 16px;
+
+  border: 1px solid #D1D1D1;
+  border-radius: 12px;
+
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+
+  .featured-image {
+    width: 237px;
+    height: 180px;
+
+    background-color: $color-primary-100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+
+    ui-tag {
+      cursor: default;
+
+      top: 12px;
+      left: 12px;
+
+      position: absolute;
+    }
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      @include m.text-s5;
+    }
+
+    &__description {
+      @include m.text-caption;
+      color: $color-primary-600;
+    }
+
+    .price {
+      margin-top: 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__value {
+        @include m.text-s4;
+      }
+
+      &__off {
+        @include m.text-s6;
+        text-decoration: line-through;
+        color: $color-primary-500;
+        display: block;
+      }
+    }
+  }
+}

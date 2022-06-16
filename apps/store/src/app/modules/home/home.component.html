@@ -1,0 +1,33 @@
+<div class="wrapper-content">
+  <section class="category-menu">
+    <ui-list [list]="categoryMenu"></ui-list>
+    <div class="category-menu__banners">
+      <img [src]="'./assets/images/banner-subfocus.svg'" alt="Space for heading">
+      <img [src]="'./assets/images/banner-subfocus.svg'" alt="Space for heading">
+    </div>
+  </section>
+
+  <section class="best-selling">
+    <ui-list [list]="products.list"></ui-list>
+    <div class="best-selling__items">
+      <ui-product *ngFor="let item of products?.items | slice:0:3" [product]="item"></ui-product>
+    </div>
+  </section>
+
+  <section class="best-selling">
+    <ui-list [list]="products.list"></ui-list>
+    <div class="best-selling__items">
+      <ui-product *ngFor="let item of products?.items | slice:0:3" [product]="item"></ui-product>
+    </div>
+  </section>
+
+  <section class="headline">
+    <div class="headline-header">
+      <h3 class="headline-header__title">Section Headline</h3>
+      <ui-button-simple [arrowRight]="true">Button</ui-button-simple>
+    </div>
+    <div class="headline__items">
+      <ui-product *ngFor="let item of products?.items | slice:0:4" [product]="item"></ui-product>
+    </div>
+  </section>
+</div>
