@@ -28,6 +28,11 @@
   }
 }
 
+.logo {
+  width: 177px;
+  height: 50px;
+}
+
 .store-header {
   max-width: 1170px;
   margin: 0 auto;
@@ -44,4 +49,79 @@
 .store-main {
   max-width: 1170px;
   margin: 16px auto;
+}
+
+.store-footer {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .copyright {
+    @include m.text-body;
+
+    width: 100%;
+    margin: 48px 0 64px 0;
+  }
+  .product-tags {
+    width: 100%;
+    max-width: 1084px;
+
+    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+      @include m.text-s4;
+      width: 100%;
+    }
+  }
+
+  ui-list:nth-child(1) {
+    margin-right: 200.54px;
+  }
+
+  ui-list:nth-child(2) {
+    margin-right: 186.79px;
+  }
+
+  ui-list:nth-child(3) {
+    margin-right: 174.3px;
+  }
+}
+
+.user-cart {
+  display: flex;
+  gap: 40px;
+
+  &__item {
+    font-size: 24px;
+  }
+
+  .cart {
+    position: relative;
+
+    &__count {
+      width: 16px;
+      height: 16px;
+
+      @include m.text-s6;
+      font-weight: 400;
+
+      color: #FFFFFF;
+      background-color: $color-aditional-two-400;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+
+      position: absolute;
+      bottom: -5px;
+      left: -5px;
+    }
+  }
 }

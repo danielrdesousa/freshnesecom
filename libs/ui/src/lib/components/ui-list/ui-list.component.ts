@@ -25,7 +25,6 @@ interface List {
 })
 export class UiListComponent implements OnInit {
   @Input() list!: List;
-  @Input() color = 'default'
 
   constructor() {}
 

@@ -1,0 +1,21 @@
+export const PRODUCT_TAGS = [
+  'Beans',
+  'Carrots',
+  'Apples',
+  'Garlic',
+  'Mushrooms',
+  'Tomatoes',
+  'Chilli peppers',
+  'Brocolli',
+  'Watermelons',
+  'Oranges',
+  'Bananas',
+  'Grapes',
+  'Cherries',
+  'Meat',
+  'Seo tag',
+  'Fish',
+  'Seo tag',
+  'Fresh food',
+  'Lemons'
+]

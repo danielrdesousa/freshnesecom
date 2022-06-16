@@ -5,8 +5,8 @@
 @import url('./assets/_reset.scss');
 @import url('./assets/_variables.scss');
 @import url('./assets/_fonts.scss');
+@import url('./assets/_icons.scss');
 
 body {
   @include m.text-body;
-  overflow: hidden;
 }
